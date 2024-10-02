@@ -1,109 +1,115 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/Banana.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">BANAVITAL</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">INICIO</a>/
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONFIGURACION</a>
-        </li>
-      </ul>
+<!DOCTYPE html>
+<html lang="es">
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/Banana.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">BANAVITAL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONFIGURACIÓN</a>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <!-- Gráfico de líneas más grande -->
+      <div class="col-md-8">
+        <h2>Line Chart</h2>
+        <canvas id="MyLineChart"></canvas>
+        <!-- Indicador de colores (semaforo) debajo del gráfico de líneas -->
+        <div id="semaforo" style="display: flex; justify-content: center; align-items: center; padding: 10px;">
+          <div id="red-light"
+            style="width: 80px; height: 80px; border-radius: 50%; background-color: grey; margin: 10px;"></div>
+          <div id="yellow-light"
+            style="width: 80px; height: 80px; border-radius: 50%; background-color: grey; margin: 10px;"></div>
+          <div id="green-light"
+            style="width: 80px; height: 80px; border-radius: 50%; background-color: grey; margin: 10px;"></div>
+        </div>
+        <p id="semaforo-message" style="text-align: center; font-weight: bold; margin-top: 10px;">Estado del valor</p>
+      </div>
+
+      <!-- Gráfico de barras más pequeño -->
+      <div class="col-md-4">
+        <h2>Bar Chart</h2>
+        <canvas id="MyBarChart"></canvas>
+      </div>
     </div>
   </div>
-</nav>
 
-<div class="container mt-5 pt-5">
-  <div class="row">
-    <div class="col-md-10">
-      <h2>Line Chart</h2>
-      <canvas id="MyLineChart"></canvas>
-    </div>
-    <div class="col-md-6">
-      <h2>Indicador</h2>
-      <div id="semaforo" style="display: flex; justify-content: center; align-items: center; padding: 10px;">
-        <div id="red-light"
-          style="width: 80px; height: 80px; border-radius: 50%; background-color: grey; margin: 10px;"></div>
-        <div id="yellow-light"
-          style="width: 80px; height: 80px; border-radius: 50%; background-color: grey; margin: 10px;"></div>
-        <div id="green-light"
-          style="width: 80px; height: 80px; border-radius: 50%; background-color: grey; margin: 10px;"></div>
-      </div>
+  <footer class="bg-dark text-white text-center text-lg-start mt-5">
+    <div class="container-fluid p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Acerca de</h5>
+          <p>Proyecto tecnoparque que busca medir por sensores unas variables del suelo en cultivo de bananos y
+            graficarlos</p>
+        </div>
 
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Enlaces útiles</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#!" class="text-white">Política de Privacidad</a></li>
+            <li><a href="#!" class="text-white">Términos y Condiciones</a></li>
+            <li><a href="#!" class="text-white">Soporte</a></li>
+          </ul>
+        </div>
 
-      <div class="row mt-5">
-        <div class="col-md-10">
-          <h2>Bar Chart</h2>
-          <canvas id="MyBarChart"></canvas>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contacto</h5>
+          <ul class="list-unstyled">
+            <li><a href="mailto:soporte@tuempresa.com" class="text-white">Email: banavital&#64;co.com</a></li>
+            <li><a href="tel:+571234567890" class="text-white">Teléfono: +57 123 456 7890</a></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <footer class="bg-dark text-white text-center text-lg-start mt-5" style="width: 100%; position: relative;">
-      <div class="container p-4">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Acerca de</h5>
-            <p>
-              Este proyecto utiliza gráficos y datos en tiempo real para analizar compras, pérdidas y manejo de bodega.
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Enlaces útiles</h5>
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Política de Privacidad</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Términos y Condiciones</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Soporte</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Contacto</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!" class="text-white">Email: soporte&#64;tuempresa.com</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Teléfono: +57 123 456 7890</a>
-              </li>
-            </ul>
-          </div>
+    <div class="container-fluid text-center p-3"
+      style="background-color: rgba(0, 0, 0, 0.8); width: 100%; min-height: 100px;">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-auto">
+          <img src="assets/img/Banana.png" alt="Logo" style="max-width: 50px; max-height: 50px;">
+        </div>
+        <div class="col-auto">
+          <p class="mb-0">© 2024:
+            <a class="text-white" href="#">banavital.com</a>
+          </p>
         </div>
       </div>
+    </div>
+  </footer>
 
-      <div class="container-fluid text-center p-3"
-        style="background-color: rgba(0, 0, 0, 0.8); min-height: 100px; width: 100%;">
-        <div class="row d-flex justify-content-between align-items-center">
-          <div class="col-auto">
-            <img src="assets/img/Banana.png" alt="Logo" style="max-width: 50px; max-height: 50px;">
-          </div>
-          <div class="col-auto">
-            <p class="mb-0">© 2024 Copyright:
-              <a class="text-white" href="#">tuempresa.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
