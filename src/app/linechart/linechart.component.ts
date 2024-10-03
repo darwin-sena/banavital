@@ -47,9 +47,9 @@ export class LinechartComponent implements OnInit {
         if (elements.length > 0) {
           const datasetIndex = elements[0].datasetIndex;
           const dataIndex = elements[0].index;
-    
+
           const value = this.lineConfig.data.datasets[datasetIndex].data[dataIndex];
-    
+
           this.updateSemaforo(value);
         }
       },
@@ -95,15 +95,15 @@ export class LinechartComponent implements OnInit {
     const yellowLight = document.getElementById('yellow-light') as HTMLElement;
     const greenLight = document.getElementById('green-light') as HTMLElement;
     const semaforoMessage = document.getElementById('semaforo-message') as HTMLElement;
-  
+
     if (redLight && yellowLight && greenLight && semaforoMessage) {
-      
+
       redLight.style.backgroundColor = 'grey';
       yellowLight.style.backgroundColor = 'grey';
       greenLight.style.backgroundColor = 'grey';
-  
+
       semaforoMessage.textContent = "Estado del valor";
-  
+
       if (value >= 600) {
         redLight.style.backgroundColor = 'red';
         semaforoMessage.textContent = "Valor negativo";
@@ -118,6 +118,6 @@ export class LinechartComponent implements OnInit {
       console.error('No se pudieron encontrar los elementos del semáforo');
     }
   }
-  
-  }
+
+}
 
