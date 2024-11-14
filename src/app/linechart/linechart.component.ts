@@ -19,21 +19,21 @@ export class LinechartComponent implements OnInit {
       labels: ['PH', 'TEMPERATURA', 'OXIGENO', 'AGUA'],
       datasets: [
         {
-          label: 'COMPRAS',
+          label: 'MES 1',
           data: ['0', '57', '59', '54'],
           fill: false,
           borderColor: '#A8699F',
           tension: 0.1,
         },
         {
-          label: 'PERDIDAS',
+          label: 'MES 2',
           data: ['25', '35', '67', '45'],
           fill: false,
           borderColor: '#8D6EB1',
           tension: 0.1,
         },
         {
-          label: 'BODEGA',
+          label: 'MES 3',
           data: ['30', '75', '80', '50'],
           fill: false,
           borderColor: '#FF336B',
